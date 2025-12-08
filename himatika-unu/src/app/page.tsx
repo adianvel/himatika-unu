@@ -1,0 +1,181 @@
+import HeroSection from '@/components/HeroSection';
+import StatisticsSection from '@/components/StatisticsSection';
+import Image from 'next/image';
+import { Quote, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { mockPosts } from '@/lib/data/mockData';
+import AnimatedContent from '@/components/reactbits/animations/AnimatedContent';
+
+export default function Home() {
+  const latestPosts = mockPosts.slice(0, 3);
+
+  return (
+    <>
+      {/* Hero Section */}
+      <HeroSection />
+
+      {/* Statistics Section */}
+      <StatisticsSection />
+
+      {/* Welcome Section - Sambutan Ketua */}
+      <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <AnimatedContent direction="left" distance={60} duration={0.7}>
+              <div className="relative group">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/HUDAMULIYA.JPG"
+                    alt="Ketua HIMATIKA"
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+            </AnimatedContent>
+
+            {/* Content */}
+            <AnimatedContent direction="right" distance={60} duration={0.7} delay={0.2}>
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center">
+                    <Quote className="text-blue-500" size={24} />
+                  </div>
+                  <span className="text-blue-500 font-semibold tracking-wide uppercase text-sm">Sambutan Ketua</span>
+                </div>
+
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                  Membangun Generasi IT yang{' '}
+                  <span className="text-blue-600">Unggul</span>{' '}
+                  dan{' '}
+                  <span className="text-indigo-600">Berakhlak</span>
+                </h2>
+
+                <blockquote className="text-slate-600 text-lg leading-relaxed mb-8 border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 pr-4 rounded-r-lg">
+                  &quot;Assalamualaikum Warahmatullahi Wabarakatuh. Selamat datang di keluarga besar HIMATIKA UNU Yogyakarta.
+                  Kami hadir sebagai wadah bagi mahasiswa informatika untuk mengembangkan
+                  skill teknologi, soft skill, dan jiwa kepemimpinan dengan semangat Aswaja.&quot;
+                </blockquote>
+
+                <div className="flex items-center gap-4">
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-lg">Huda Muliya</h4>
+                    <p className="text-slate-500 text-sm">Ketua HIMATIKA 2025/2026</p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedContent>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
+      <section className="py-20 md:py-28 bg-slate-50 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <AnimatedContent direction="up" distance={30} duration={0.5}>
+            <div className="text-center mb-16">
+              <span className="inline-block bg-blue-50 text-blue-600 border border-blue-100 text-sm font-semibold px-4 py-2 rounded-full mb-4">
+                Berita & Kegiatan
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                Berita Terbaru
+              </h2>
+              <p className="text-slate-500 max-w-2xl mx-auto">
+                Ikuti perkembangan terbaru kegiatan dan program kerja HIMATIKA UNU Yogyakarta
+              </p>
+            </div>
+          </AnimatedContent>
+
+          {/* News Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {latestPosts.map((post, index) => (
+              <AnimatedContent
+                key={post.id}
+                direction="up"
+                distance={40}
+                delay={index * 0.15}
+                duration={0.5}
+              >
+                <Link
+                  href={`/news/${post.slug || post.id}`}
+                  className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-slate-100"
+                >
+                  <div className="relative h-48 bg-slate-100 overflow-hidden">
+                    {post.thumbnail_url ? (
+                      <Image
+                        src={post.thumbnail_url}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-slate-300 text-4xl font-bold">H</span>
+                      </div>
+                    )}
+                    {post.category && (
+                      <span className="absolute top-3 right-3 bg-white text-slate-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm border border-slate-100">
+                        {post.category}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-base font-semibold text-blue-600 group-hover:text-blue-700 transition-colors line-clamp-2 mb-1">
+                      {post.title}
+                    </h3>
+                    <p className="text-slate-400 text-sm">
+                      {new Date(post.published_at).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    </p>
+                  </div>
+                </Link>
+              </AnimatedContent>
+            ))}
+          </div>
+
+          {/* View All Link */}
+          <AnimatedContent direction="up" distance={20} delay={0.4}>
+            <div className="text-center mt-16">
+              <Link
+                href="/news"
+                className="group inline-flex items-center gap-2 text-slate-700 font-semibold px-8 py-3 rounded-full border border-slate-200 hover:bg-slate-100 transition-all"
+              >
+                Lihat Semua Berita
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </AnimatedContent>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <AnimatedContent direction="up" distance={40} duration={0.6}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Siap Bergabung dengan Kami?
+            </h2>
+            <p className="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+              Jadilah bagian dari keluarga besar HIMATIKA UNU Yogyakarta dan kembangkan potensimu
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white font-bold px-8 py-4 rounded-full hover:bg-slate-800 transition-all"
+              >
+                Hubungi Kami
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-slate-600 border border-slate-200 font-semibold px-8 py-4 rounded-full hover:bg-slate-50 transition-all"
+              >
+                Pelajari Lebih Lanjut
+              </Link>
+            </div>
+          </AnimatedContent>
+        </div>
+      </section>
+    </>
+  );
+}

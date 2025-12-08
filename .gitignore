@@ -1,0 +1,10 @@
+.vscode
+CLAUDE.md
+plan.md
+node_modules
+.env
+.next
+out/
+dist/
+*.tsbuildinfo
+logs
