@@ -45,8 +45,10 @@ export default function Footer() {
         <footer className="bg-white text-white">
             {/* Gradient Card */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
-                <div className="rounded-3xl bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 p-8 md:p-12 lg:p-14">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+                <div className="rounded-3xl bg-slate-900 p-8 md:p-12 lg:p-14 relative overflow-hidden">
+                    <div className="noise-overlay" />
+                    <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/5 rounded-full blur-2xl" />
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                         {/* Left — Logo + Description + Social */}
                         <div>
                             <div className="flex items-center gap-3 mb-6">
@@ -104,10 +106,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Copyright — outside card */}
-                <p className="text-center text-slate-400 text-sm mt-8">
-                    &copy; {new Date().getFullYear()} HIMATIKA UNU Yogyakarta. All rights reserved.
-                </p>
+                {/* Copyright */}
+                <div className="mt-6 py-4 border-t border-slate-100">
+                    <p className="text-center text-slate-500 text-sm font-sans">
+                        &copy; {new Date().getFullYear()} HIMATIKA UNU Yogyakarta. All rights reserved.
+                    </p>
+                </div>
             </div>
         </footer>
     );

@@ -47,8 +47,8 @@ export default function Navbar() {
                 transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
                 className={`w-full max-w-4xl rounded-2xl border transition-all duration-300 ${
                     isScrolled
-                        ? 'bg-white/80 backdrop-blur-xl border-slate-200 shadow-lg shadow-slate-900/5'
-                        : 'bg-white/50 backdrop-blur-md border-slate-100'
+                        ? 'bg-white/85 backdrop-blur-xl border-slate-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_8px_24px_rgba(0,0,0,0.04)]'
+                        : 'bg-white/40 backdrop-blur-md border-white/60'
                 }`}
             >
                 <div className="px-4 sm:px-6">
@@ -97,7 +97,7 @@ export default function Navbar() {
                                     {isActive(link.href) && (
                                         <motion.span
                                             layoutId="navbar-active"
-                                            className="absolute bottom-0 left-2 right-2 h-[2px] bg-blue-600 rounded-full"
+                                            className="absolute -bottom-0.5 left-2 right-2 h-[2px] bg-blue-600 rounded-full"
                                             transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
                                         />
                                     )}
@@ -109,7 +109,7 @@ export default function Navbar() {
                         <div className="hidden md:block">
                             <Link
                                 href="/contact"
-                                className="px-4 py-1.5 text-sm bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all"
+                                className="px-4 py-1.5 text-sm bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300"
                             >
                                 Hubungi Kami
                             </Link>
