@@ -3,29 +3,20 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import BlurText from '@/components/reactbits/text-animations/BlurText';
+import VideoBackground from '@/components/VideoBackground';
 
 export default function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Video background */}
-            <div className="absolute inset-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
-                >
-                    <source src="/prism-bg.webm" type="video/webm" />
-                </video>
-            </div>
+            <VideoBackground src="/bg-video.webm" />
 
             {/* Content */}
             <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 w-full text-center">
                 {/* Main Heading */}
                 <div role="heading" aria-level={1} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-wide text-slate-900 mb-4 leading-none">
                     <BlurText
-                        text="tolong saya pak jokowi"
+                        text="MEMBANGUN GENERASI IT"
                         delay={80}
                         animateBy="words"
                         direction="top"
@@ -33,7 +24,7 @@ export default function HeroSection() {
                     />
                     <br />
                     <BlurText
-                        text="lambaikan tangan ke kamera"
+                        text="UNGGUL & BERAKHLAK"
                         delay={80}
                         animateBy="words"
                         direction="top"
@@ -52,7 +43,6 @@ export default function HeroSection() {
                         href="/about"
                         className="group inline-flex items-center justify-center gap-3 bg-slate-900 text-white pl-8 pr-6 py-3.5 rounded-full font-semibold font-sans text-base hover:bg-slate-800 transition-all duration-300"
                     >
-                        Kenalan Yuk
                         <span className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
                         </span>

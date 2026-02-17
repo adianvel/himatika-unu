@@ -14,30 +14,23 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Sponsor Section */}
-      <SponsorSection />
-
       {/* Welcome Section - Sambutan Ketua */}
       <section className="py-20 md:py-28 relative overflow-hidden">
-        {/* Video background */}
-        <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="/prism-sambutan.webm" type="video/webm" />
-          </video>
-        </div>
+        {/* Background image */}
+        <Image
+          src="/bg-sambutan.webp"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
             <AnimatedContent direction="left" distance={60} duration={0.7}>
               <div className="relative group">
                 <div className="absolute -inset-4 bg-blue-50 rounded-3xl -rotate-3 opacity-60" />
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-[4/3] md:aspect-[3/3] rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/HUDAMULIYA.webp"
                     alt="Ketua HIMATIKA"
@@ -63,7 +56,7 @@ export default function Home() {
                   & Berakhlak
                 </h2>
 
-                <blockquote className="text-slate-600 text-lg leading-relaxed mb-8 border-l-4 border-blue-500 pl-6 bg-slate-50 py-4 pr-4 rounded-r-lg font-sans">
+                <blockquote className="text-slate-600 text-base md:text-lg leading-relaxed mb-8 border-l-4 border-blue-500 pl-4 md:pl-6 bg-slate-50 py-4 pr-4 rounded-r-lg font-sans">
                   &quot;Assalamualaikum Warahmatullahi Wabarakatuh. Selamat datang di keluarga besar HIMATIKA UNU Yogyakarta.
                   Kami hadir sebagai wadah bagi mahasiswa informatika untuk mengembangkan
                   skill teknologi, soft skill, dan jiwa kepemimpinan dengan semangat Aswaja.&quot;
@@ -162,6 +155,9 @@ export default function Home() {
           </AnimatedContent>
         </div>
       </section>
+
+      {/* Sponsor Section */}
+      <SponsorSection />
 
       <div className="section-divider" />
 

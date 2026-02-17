@@ -9,28 +9,29 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 min-h-[70vh]">
+        <div className="min-h-screen bg-white relative overflow-hidden">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 lg:min-h-[70vh]">
                     {/* Left Side */}
-                    <div className="flex flex-col justify-between">
+                    <div className="flex flex-col relative">
                         <h2 className="text-2xl md:text-3xl font-medium text-slate-900 leading-snug">
                             Siap berkolaborasi<br />
                             bersama HIMATIKA?
                         </h2>
 
-                        <div className="mt-auto pt-16">
-                            <div className="w-12 h-12 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center mb-6 relative overflow-hidden">
-                                <Image
-                                    src="/logohima.png"
-                                    alt="HIMATIKA"
-                                    fill
-                                    className="object-contain p-1"
-                                />
-                            </div>
-                            <p className="text-slate-900 text-sm font-medium">HIMATIKA UNU Yogyakarta</p>
+                        {/* Background image positioned below heading */}
+                        <div className="relative w-full h-[300px] lg:h-[350px] mt-6 -ml-4">
+                            <Image
+                                src="/bg-kontak.webp"
+                                alt=""
+                                fill
+                                className="object-contain object-left -scale-x-100"
+                                priority
+                            />
+                        </div>
+                        <div className="flex-grow" />
+                        <div className="lg:mt-auto">
                             <p className="text-slate-500 text-sm">Jl. Lowanu No. 47, Sorosutan, Yogyakarta</p>
-
                             <div className="flex gap-5 mt-5">
                                 <Link href="https://instagram.com/himatika_unujogja" target="_blank" className="text-slate-600 hover:text-slate-900 text-sm transition-colors">Instagram</Link>
                                 <Link href="https://youtube.com/@himatikaunujogja" target="_blank" className="text-slate-600 hover:text-slate-900 text-sm transition-colors">YouTube</Link>
@@ -41,13 +42,13 @@ export default function ContactPage() {
 
                     {/* Right Side — Form */}
                     <div>
-                        <h1 className="text-4xl md:text-5xl font-light text-slate-900 mb-12">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-slate-900 mb-8 md:mb-12">
                             Hubungi Kami
                         </h1>
 
-                        <form className="space-y-8">
+                        <form className="space-y-6 md:space-y-8">
                             {/* Name Row */}
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
                                     <input
                                         type="text"
@@ -92,11 +93,11 @@ export default function ContactPage() {
                             </div>
 
                             {/* Privacy */}
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-start gap-3">
                                 <input
                                     type="checkbox"
                                     id="privacy"
-                                    className="w-5 h-5 rounded-full border-2 border-slate-300 text-slate-900 focus:ring-0 focus:ring-offset-0 accent-slate-900"
+                                    className="w-5 h-5 rounded-full border-2 border-slate-300 text-slate-900 focus:ring-0 focus:ring-offset-0 accent-slate-900 mt-0.5 flex-shrink-0"
                                 />
                                 <label htmlFor="privacy" className="text-slate-600 text-sm">
                                     Saya menyetujui bahwa data ini digunakan untuk keperluan komunikasi

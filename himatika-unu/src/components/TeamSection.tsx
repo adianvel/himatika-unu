@@ -13,9 +13,9 @@ function MemberCard({ member, index }: { member: TeamMember; index: number }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
-            className="flex-shrink-0 w-[280px] md:w-[320px]"
+            className="flex-shrink-0 w-[240px] sm:w-[280px] md:w-[320px]"
         >
-            <div className="bg-slate-50 rounded-2xl p-6 h-full">
+            <div className="bg-slate-50 rounded-2xl p-4 sm:p-6 h-full">
                 {/* Photo area */}
                 <div className="relative w-full aspect-square rounded-xl bg-slate-100 mb-5 flex items-center justify-center overflow-hidden">
                     {/* Decorative circles */}
@@ -95,7 +95,7 @@ export default function TeamSection() {
     };
 
     return (
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-12 md:pb-20">
             <div className="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-16">
                 {/* Left Navigation */}
                 <nav className="lg:sticky lg:top-32 lg:self-start">
@@ -128,7 +128,7 @@ export default function TeamSection() {
                 <div className="min-w-0">
                     {/* Header */}
                     <div className="mb-8">
-                        <h1 className="text-4xl md:text-5xl font-light text-slate-900 mb-2">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-slate-900 mb-2">
                             Struktur Organisasi
                         </h1>
                         <p className="text-slate-500">

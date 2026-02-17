@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import FooterWrapper from "@/components/FooterWrapper";
 import BackToTop from "@/components/BackToTop";
 
 const bebasNeue = Bebas_Neue({
@@ -53,7 +53,7 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer />
+        <FooterWrapper />
         <BackToTop />
       </body>
     </html>

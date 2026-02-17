@@ -19,11 +19,19 @@ const values = [
 export default function AboutPage() {
     return (
         <>
-            {/* Page Header */}
-            <section className="relative py-32 md:py-40 overflow-hidden">
-                <div className="absolute inset-0 bg-slate-50" />
-                <div className="absolute inset-0 noise-overlay" />
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* Page Header + History */}
+            <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden">
+                <Image
+                    src="/bg-tentang.webp"
+                    alt=""
+                    fill
+                    className="object-cover opacity-30"
+                    priority
+                />
+                <div className="absolute inset-0 bg-slate-100/10" />
+
+                {/* Header */}
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
                     <span className="inline-block text-blue-600 text-sm font-semibold font-sans mb-4 tracking-wider uppercase">PROFIL ORGANISASI</span>
                     <div role="heading" aria-level={1} className="text-4xl md:text-5xl lg:text-6xl uppercase tracking-wide text-slate-900 mb-6">
                         <BlurText
@@ -38,11 +46,9 @@ export default function AboutPage() {
                         Kenali lebih dekat Himpunan Mahasiswa Informatika UNU Yogyakarta
                     </p>
                 </div>
-            </section>
 
-            {/* History Section */}
-            <section className="py-20 bg-slate-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* History */}
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <AnimatedContent direction="left" distance={50} duration={0.6}>
                             <div>
@@ -52,7 +58,7 @@ export default function AboutPage() {
                                     </div>
                                     <span className="font-sans text-blue-500 font-semibold tracking-wide uppercase text-sm">Sejarah</span>
                                 </div>
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-6">Perjalanan HIMATIKA</h2>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-6">Perjalanan HIMATIKA</h2>
                                 <p className="text-slate-600 text-lg leading-relaxed mb-6 font-sans">
                                     HIMATIKA UNU Yogyakarta didirikan pada tahun 2019 bersamaan dengan dibukanya
                                     Program Studi Informatika di Universitas Nahdlatul Ulama Yogyakarta.
@@ -64,10 +70,10 @@ export default function AboutPage() {
                             </div>
                         </AnimatedContent>
                         <AnimatedContent direction="right" distance={50} duration={0.6} delay={0.2}>
-                            <div className="relative">
-                                <div className="aspect-square rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden">
+                            <div className="relative flex justify-center lg:justify-start">
+                                <div className="items-center justify-center overflow-hidden">
                                     <Image
-                                        src="/logohima.webp"
+                                        src="/logohima-removebg-preview.webp"
                                         alt="Logo HIMATIKA"
                                         width={192}
                                         height={192}
@@ -147,7 +153,7 @@ export default function AboutPage() {
                                     </div>
                                     <span className="font-sans text-blue-500 font-semibold tracking-wide uppercase text-sm">Filosofi Logo</span>
                                 </div>
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-6">Makna Logo Kami</h2>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-6">Makna Logo Kami</h2>
                                 <div className="space-y-4">
                                     {[
                                         { title: 'Warna Biru', desc: 'Melambangkan profesionalisme, kepercayaan, dan teknologi.' },
@@ -168,7 +174,7 @@ export default function AboutPage() {
                             <div className="flex justify-center">
                                 <div className="w-64 h-64 bg-blue-50 rounded-3xl flex items-center justify-center shadow-sm border border-blue-100">
                                     <Image
-                                        src="/logohima.png"
+                                        src="/logohima-removebg-preview.webp"
                                         alt="Logo HIMATIKA"
                                         width={192}
                                         height={192}

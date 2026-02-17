@@ -57,7 +57,7 @@ export default function Navbar() {
                         <Link href="/" className="flex items-center gap-2.5 group">
                             <div className="w-8 h-8 rounded-lg overflow-hidden bg-slate-50 p-0.5 border border-slate-200 relative">
                                 <Image
-                                    src="/logohima.png"
+                                    src="/logohima-removebg-preview.webp"
                                     alt="HIMATIKA Logo"
                                     fill
                                     className="object-contain"

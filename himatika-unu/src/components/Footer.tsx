@@ -54,7 +54,7 @@ export default function Footer() {
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-10 h-10 rounded-lg overflow-hidden bg-white/20 p-1 relative">
                                     <Image
-                                        src="/logohima.png"
+                                        src="/logohima-removebg-preview.webp"
                                         alt="HIMATIKA Logo"
                                         fill
                                         className="object-contain"
