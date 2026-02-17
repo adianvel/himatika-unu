@@ -17,11 +17,21 @@ export default function Home() {
       {/* Sponsor Section */}
       <SponsorSection />
 
-      <div className="section-divider" />
-
       {/* Welcome Section - Sambutan Ketua */}
-      <section className="py-20 md:py-28 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 md:py-28 relative overflow-hidden">
+        {/* Video background */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/prism-sambutan.webm" type="video/webm" />
+          </video>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
             <AnimatedContent direction="left" distance={60} duration={0.7}>
@@ -35,7 +45,7 @@ export default function Home() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
-              </div>      
+              </div>
             </AnimatedContent>
 
             {/* Content */}

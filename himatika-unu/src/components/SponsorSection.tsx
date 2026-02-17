@@ -33,8 +33,8 @@ const row2: LogoItem[] = [
 
 export default function SponsorSection() {
     return (
-        <section className="py-16 bg-white">
-            <p className="text-center text-sm font-sans font-semibold tracking-widest uppercase text-slate-900 mb-10">
+        <section className="py-8 bg-transparent relative">
+            <p className="text-center text-xs font-sans font-semibold tracking-widest uppercase text-slate-400 mb-6">
                 Didukung Oleh Mitra & Sponsor Kami
             </p>
             <div className="space-y-4">
@@ -46,7 +46,7 @@ export default function SponsorSection() {
                     gap={32}
                     logoHeight={48}
                     fadeOut
-                    fadeOutColor="#ffffff"
+                    fadeOutColor="transparent"
                     ariaLabel="Sponsor HIMATIKA baris 1"
                 />
                 <LogoLoop
@@ -57,7 +57,7 @@ export default function SponsorSection() {
                     gap={32}
                     logoHeight={48}
                     fadeOut
-                    fadeOutColor="#ffffff"
+                    fadeOutColor="transparent"
                     ariaLabel="Sponsor HIMATIKA baris 2"
                 />
             </div>

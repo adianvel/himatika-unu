@@ -6,7 +6,7 @@ import BlurText from '@/components/reactbits/text-animations/BlurText';
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Video background */}
             <div className="absolute inset-0">
                 <video
@@ -21,11 +21,11 @@ export default function HeroSection() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 w-full text-center">
+            <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 w-full text-center">
                 {/* Main Heading */}
-                <div role="heading" aria-level={1} className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-wide text-slate-900 mb-6 leading-none">
+                <div role="heading" aria-level={1} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-wide text-slate-900 mb-4 leading-none">
                     <BlurText
-                        text="MEMBANGUN GENERASI IT"
+                        text="tolong saya pak jokowi"
                         delay={80}
                         animateBy="words"
                         direction="top"
@@ -33,7 +33,7 @@ export default function HeroSection() {
                     />
                     <br />
                     <BlurText
-                        text="UNGGUL & BERAKHLAK"
+                        text="lambaikan tangan ke kamera"
                         delay={80}
                         animateBy="words"
                         direction="top"
@@ -42,12 +42,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* Subtitle */}
-                <p className="text-lg md:text-xl text-slate-500 font-sans mt-6 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base md:text-lg text-slate-500 font-sans mt-4 max-w-2xl mx-auto leading-relaxed">
                     Himpunan Mahasiswa Informatika UNU Yogyakarta — wadah pengembangan akademik, kreativitas, dan kepemimpinan mahasiswa informatika
                 </p>
 
                 {/* CTA Button */}
-                <div className="flex items-center justify-center gap-4 mt-10">
+                <div className="flex items-center justify-center gap-4 mt-8">
                     <Link
                         href="/about"
                         className="group inline-flex items-center justify-center gap-3 bg-slate-900 text-white pl-8 pr-6 py-3.5 rounded-full font-semibold font-sans text-base hover:bg-slate-800 transition-all duration-300"
