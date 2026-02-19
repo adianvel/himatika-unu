@@ -8,3 +8,6 @@ out/
 dist/
 *.tsbuildinfo
 logs
+bg_plan.md
+*.webp
+!himatika-unu/public/**/*.webp
