@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" fill="none">
+  <rect x="0" y="10" width="30" height="30" rx="6" fill="#1e293b"/>
+  <rect x="6" y="16" width="8" height="18" rx="2" fill="white"/>
+  <rect x="17" y="16" width="8" height="18" rx="2" fill="white"/>
+  <text x="38" y="36" font-family="Arial, sans-serif" font-weight="700" font-size="22" fill="#1e293b">dicoding</text>
+</svg>

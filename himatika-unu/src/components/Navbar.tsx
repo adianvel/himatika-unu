@@ -55,7 +55,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between h-14">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-2.5 group">
-                            <div className="w-8 h-8 rounded-lg overflow-hidden bg-slate-50 p-0.5 border border-slate-200 relative">
+                            <div className="w-8 h-10 rounded-lg overflow-hidden relative">
                                 <Image
                                     src="/logohima-removebg-preview.webp"
                                     alt="HIMATIKA Logo"

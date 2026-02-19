@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
+  <circle cx="18" cy="25" r="12" fill="#e11d48"/>
+  <circle cx="18" cy="25" r="6" fill="white"/>
+  <circle cx="28" cy="15" r="4" fill="#e11d48"/>
+  <text x="40" y="34" font-family="Arial, sans-serif" font-weight="700" font-size="20" fill="#1e293b">Telkom</text>
+  <text x="126" y="34" font-family="Arial, sans-serif" font-weight="400" font-size="16" fill="#475569">Indonesia</text>
+</svg>

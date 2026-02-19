@@ -1,34 +1,39 @@
 'use client';
 
-import { GraduationCap, Monitor, Wifi, Database, Cloud, Shield, Cpu, Globe, Code, Layers, Laptop, Server } from 'lucide-react';
+import Image from 'next/image';
 import LogoLoop from '@/components/reactbits/animations/LogoLoop';
 import type { LogoItem } from '@/components/reactbits/animations/LogoLoop';
 
-function SponsorCard({ icon: Icon, label }: { icon: React.ElementType; label: string }) {
+function SponsorLogo({ src, alt }: { src: string; alt: string }) {
     return (
-        <div className="flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 select-none">
-            <Icon className="w-5 h-5 sm:w-7 sm:h-7 text-slate-700 flex-shrink-0" />
-            <span className="text-sm sm:text-lg font-semibold text-slate-700 font-sans whitespace-nowrap">{label}</span>
+        <div className="flex items-center px-4 sm:px-8 py-3 select-none">
+            <Image
+                src={src}
+                alt={alt}
+                width={860}
+                height={90}
+                className="h-6 sm:h-8 w-auto object-contain"
+            />
         </div>
     );
 }
 
 const row1: LogoItem[] = [
-    { node: <SponsorCard icon={GraduationCap} label="UNU Yogyakarta" />, title: 'UNU Yogyakarta' },
-    { node: <SponsorCard icon={Monitor} label="Dicoding" />, title: 'Dicoding' },
-    { node: <SponsorCard icon={Cloud} label="Google Cloud" />, title: 'Google Cloud' },
-    { node: <SponsorCard icon={Database} label="Supabase" />, title: 'Supabase' },
-    { node: <SponsorCard icon={Code} label="GitHub Education" />, title: 'GitHub Education' },
-    { node: <SponsorCard icon={Wifi} label="Telkom Indonesia" />, title: 'Telkom Indonesia' },
+    { node: <SponsorLogo src="/logos/unu-yogyakarta.svg" alt="UNU Yogyakarta" />, title: 'UNU Yogyakarta' },
+    { node: <SponsorLogo src="/logos/dicoding.svg" alt="Dicoding" />, title: 'Dicoding' },
+    { node: <SponsorLogo src="/logos/google-cloud.svg" alt="Google Cloud" />, title: 'Google Cloud' },
+    { node: <SponsorLogo src="/logos/supabase.svg" alt="Supabase" />, title: 'Supabase' },
+    { node: <SponsorLogo src="/logos/github.svg" alt="GitHub Education" />, title: 'GitHub Education' },
+    { node: <SponsorLogo src="/logos/telkom.svg" alt="Telkom Indonesia" />, title: 'Telkom Indonesia' },
 ];
 
 const row2: LogoItem[] = [
-    { node: <SponsorCard icon={Shield} label="Tokopedia" />, title: 'Tokopedia' },
-    { node: <SponsorCard icon={Cpu} label="Intel Indonesia" />, title: 'Intel Indonesia' },
-    { node: <SponsorCard icon={Globe} label="Niagahoster" />, title: 'Niagahoster' },
-    { node: <SponsorCard icon={Layers} label="Vercel" />, title: 'Vercel' },
-    { node: <SponsorCard icon={Laptop} label="Lenovo" />, title: 'Lenovo' },
-    { node: <SponsorCard icon={Server} label="IDCloudHost" />, title: 'IDCloudHost' },
+    { node: <SponsorLogo src="/logos/tokopedia.svg" alt="Tokopedia" />, title: 'Tokopedia' },
+    { node: <SponsorLogo src="/logos/intel.svg" alt="Intel Indonesia" />, title: 'Intel Indonesia' },
+    { node: <SponsorLogo src="/logos/niagahoster.svg" alt="Niagahoster" />, title: 'Niagahoster' },
+    { node: <SponsorLogo src="/logos/vercel.svg" alt="Vercel" />, title: 'Vercel' },
+    { node: <SponsorLogo src="/logos/lenovo.svg" alt="Lenovo" />, title: 'Lenovo' },
+    { node: <SponsorLogo src="/logos/idcloudhost.svg" alt="IDCloudHost" />, title: 'IDCloudHost' },
 ];
 
 export default function SponsorSection() {

@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #0f172a;
-  --font-sans: var(--font-nunito), 'Nunito', system-ui, sans-serif;
+  --font-sans: var(--font-general-sans), 'General Sans', system-ui, sans-serif;
   --font-heading: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
   --color-accent: #2563eb;
   --color-accent-light: #3b82f6;
@@ -156,27 +156,6 @@ body {
 .animate-float-slow { animation: float-slow 20s ease-in-out infinite; }
 .animate-float-medium { animation: float-medium 15s ease-in-out infinite; }
 .animate-float-fast { animation: float-fast 12s ease-in-out infinite; }
-
-/* StarBorder animations */
-@keyframes star-movement {
-  0% { transform: translate(0%, 0%); }
-  50% { transform: translate(100%, 100%); }
-  100% { transform: translate(0%, 0%); }
-}
-
-@keyframes star-movement-reverse {
-  0% { transform: translate(0%, 0%); }
-  50% { transform: translate(-100%, -100%); }
-  100% { transform: translate(0%, 0%); }
-}
-
-.animate-star-movement {
-  animation: star-movement var(--star-speed, 6s) ease-in-out infinite;
-}
-
-.animate-star-movement-reverse {
-  animation: star-movement-reverse var(--star-speed, 6s) ease-in-out infinite;
-}
 
 :root {
   --radius: 0.625rem;

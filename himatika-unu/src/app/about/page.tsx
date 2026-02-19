@@ -22,7 +22,7 @@ export default function AboutPage() {
             {/* Page Header + History */}
             <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden">
                 <Image
-                    src="/bg-tentang.webp"
+                    src="/"
                     alt=""
                     fill
                     className="object-cover opacity-30"
@@ -70,7 +70,7 @@ export default function AboutPage() {
                             </div>
                         </AnimatedContent>
                         <AnimatedContent direction="right" distance={50} duration={0.6} delay={0.2}>
-                            <div className="relative flex justify-center lg:justify-start">
+                            <div className="relative flex justify-center">
                                 <div className="items-center justify-center overflow-hidden">
                                     <Image
                                         src="/logohima-removebg-preview.webp"
@@ -172,7 +172,7 @@ export default function AboutPage() {
                         </AnimatedContent>
                         <AnimatedContent direction="right" distance={50} duration={0.6} delay={0.2}>
                             <div className="flex justify-center">
-                                <div className="w-64 h-64 bg-blue-50 rounded-3xl flex items-center justify-center shadow-sm border border-blue-100">
+                                <div className="w-64 h-64 rounded-3xl flex items-center justify-center">
                                     <Image
                                         src="/logohima-removebg-preview.webp"
                                         alt="Logo HIMATIKA"
@@ -196,8 +196,7 @@ export default function AboutPage() {
                         <div className="text-center mb-16">
                             <span className="inline-block bg-blue-50 text-blue-600 border border-blue-100 text-sm font-semibold font-sans px-4 py-2 rounded-full mb-4">Nilai-Nilai</span>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900">
-                                Nilai yang Kami{' '}
-                                <span className="text-gradient-accent">Junjung</span>
+                                Nilai yang Kami Junjung
                             </h2>
                         </div>
                     </AnimatedContent>

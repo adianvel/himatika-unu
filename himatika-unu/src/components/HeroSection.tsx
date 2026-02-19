@@ -16,7 +16,7 @@ export default function HeroSection() {
                 {/* Main Heading */}
                 <div role="heading" aria-level={1} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-wide text-slate-900 mb-4 leading-none">
                     <BlurText
-                        text="MEMBANGUN GENERASI IT"
+                        text="tolong saya pak jokowi"
                         delay={80}
                         animateBy="words"
                         direction="top"
@@ -24,7 +24,7 @@ export default function HeroSection() {
                     />
                     <br />
                     <BlurText
-                        text="UNGGUL & BERAKHLAK"
+                        text="plis"
                         delay={80}
                         animateBy="words"
                         direction="top"

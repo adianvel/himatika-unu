@@ -18,7 +18,7 @@ export default function Home() {
       <section className="py-20 md:py-28 relative overflow-hidden">
         {/* Background image */}
         <Image
-          src="/bg-sambutan.webp"
+          src="/"
           alt=""
           fill
           className="object-cover"
@@ -29,8 +29,7 @@ export default function Home() {
             {/* Image */}
             <AnimatedContent direction="left" distance={60} duration={0.7}>
               <div className="relative group">
-                <div className="absolute -inset-4 bg-blue-50 rounded-3xl -rotate-3 opacity-60" />
-                <div className="relative aspect-[4/3] md:aspect-[3/3] rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-[4/3] md:aspect-[3/3] rounded-2xl overflow-hidden">
                   <Image
                     src="/HUDAMULIYA.webp"
                     alt="Ketua HIMATIKA"
@@ -51,9 +50,7 @@ export default function Home() {
                   <span className="font-sans text-blue-500 font-semibold tracking-wide uppercase text-sm">Sambutan Ketua</span>
                 </div>
                 <h2 className="text-sm font-sans text-slate-600 mb-6">
-                  Generasi IT{' '}
-                  <span className="text-gradient-accent">Unggul</span>{' '}
-                  & Berakhlak
+                  Generasi IT Unggul & Berakhlak
                 </h2>
 
                 <blockquote className="text-slate-600 text-base md:text-lg leading-relaxed mb-8 border-l-4 border-blue-500 pl-4 md:pl-6 bg-slate-50 py-4 pr-4 rounded-r-lg font-sans">
@@ -170,7 +167,7 @@ export default function Home() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <AnimatedContent direction="up" distance={40} duration={0.6}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-6">
-              Siap Bergabung <span className="text-gradient-accent">dengan Kami?</span>
+              Siap Bergabung dengan Kami?
             </h2>
             <p className="text-slate-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-sans">
               Jadilah bagian dari keluarga besar HIMATIKA UNU Yogyakarta dan kembangkan potensimu

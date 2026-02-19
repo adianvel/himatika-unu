@@ -13,7 +13,7 @@ function MemberCard({ member, index }: { member: TeamMember; index: number }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
-            className="flex-shrink-0 w-[240px] sm:w-[280px] md:w-[320px]"
+            className="flex-shrink-0 w-[75vw] sm:w-[45vw] lg:w-[calc((100%-40px)/3)]"
         >
             <div className="bg-slate-50 rounded-2xl p-4 sm:p-6 h-full">
                 {/* Photo area */}
@@ -137,10 +137,10 @@ export default function TeamSection() {
                     </div>
 
                     {/* Cards Slider */}
-                    <div className="relative">
+                    <div className="relative -mx-4 sm:-mx-6 lg:-mx-8">
                         <div
                             ref={scrollRef}
-                            className="flex gap-5 overflow-x-auto pb-6 scrollbar-hide"
+                            className="flex gap-5 overflow-x-auto pb-6 px-4 sm:px-6 lg:px-8 scrollbar-hide"
                             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                         >
                             <AnimatePresence mode="wait">
@@ -155,6 +155,7 @@ export default function TeamSection() {
                                     {activeMembers.map((member, index) => (
                                         <MemberCard key={member.name} member={member} index={index} />
                                     ))}
+                                    <div className="flex-shrink-0 w-1" aria-hidden="true" />
                                 </motion.div>
                             </AnimatePresence>
                         </div>

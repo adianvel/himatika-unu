@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
     return (
-        <div className="min-h-screen bg-white relative">
+        <div className="min-h-screen bg-white relative overflow-x-clip">
             <Image
                 src="/bg-struktur.webp"
                 alt=""

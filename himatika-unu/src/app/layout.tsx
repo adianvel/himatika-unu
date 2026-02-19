@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Nunito } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FooterWrapper from "@/components/FooterWrapper";
@@ -11,10 +12,15 @@ const bebasNeue = Bebas_Neue({
   weight: "400",
 });
 
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+const generalSans = localFont({
+  src: [
+    { path: "./fonts/GeneralSans-Regular.woff", weight: "400", style: "normal" },
+    { path: "./fonts/GeneralSans-Medium.woff", weight: "500", style: "normal" },
+    { path: "./fonts/GeneralSans-Semibold.woff", weight: "600", style: "normal" },
+    { path: "./fonts/GeneralSans-Bold.woff", weight: "700", style: "normal" },
+  ],
+  variable: "--font-general-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -47,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body
-        className={`${bebasNeue.variable} ${nunito.variable} font-sans antialiased bg-white`}
+        className={`${bebasNeue.variable} ${generalSans.variable} font-sans antialiased bg-white`}
       >
         <Navbar />
         <main className="min-h-screen">

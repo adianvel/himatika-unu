@@ -24,14 +24,6 @@ const linkColumns = [
             { href: '/team', label: 'Divisi' },
         ],
     },
-    {
-        title: 'Lainnya',
-        links: [
-            { href: '/news', label: 'Kegiatan' },
-            { href: '/news', label: 'Workshop' },
-            { href: '/contact', label: 'Hubungi Kami' },
-        ],
-    },
 ];
 
 const socialLinks = [
@@ -84,7 +76,7 @@ export default function Footer() {
                         </div>
 
                         {/* Right — Link Columns */}
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-2 gap-8 lg:ml-auto lg:mr-16">
                             {linkColumns.map((column) => (
                                 <div key={column.title}>
                                     <h4 className="font-semibold text-white text-sm mb-4">{column.title}</h4>

@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -19,16 +18,6 @@ export default function ContactPage() {
                             bersama HIMATIKA?
                         </h2>
 
-                        {/* Background image positioned below heading */}
-                        <div className="relative w-full h-[300px] lg:h-[350px] mt-6 -ml-4">
-                            <Image
-                                src="/bg-kontak.webp"
-                                alt=""
-                                fill
-                                className="object-contain object-left -scale-x-100"
-                                priority
-                            />
-                        </div>
                         <div className="flex-grow" />
                         <div className="lg:mt-auto">
                             <p className="text-slate-500 text-sm">Jl. Lowanu No. 47, Sorosutan, Yogyakarta</p>
