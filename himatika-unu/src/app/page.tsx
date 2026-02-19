@@ -16,15 +16,7 @@ export default function Home() {
 
       {/* Welcome Section - Sambutan Ketua */}
       <section className="py-20 md:py-28 relative overflow-hidden">
-        {/* Background image */}
-        <Image
-          src="/bg-sambutan.webp"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
             <AnimatedContent direction="left" distance={60} duration={0.7}>
@@ -47,7 +39,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center">
                     <Quote className="text-blue-500" size={24} />
                   </div>
-                  <span className="font-sans text-blue-500 font-semibold tracking-wide uppercase text-sm">Sambutan Ketua</span>
+                  <span className="font-sans font-semibold tracking-wide uppercase text-sm">Sambutan Ketua</span>
                 </div>
                 <h2 className="text-sm font-sans text-slate-600 mb-6">
                   Generasi IT Unggul & Berakhlak
@@ -79,9 +71,6 @@ export default function Home() {
           {/* Section Header */}
           <AnimatedContent direction="up" distance={30} duration={0.5}>
             <div className="text-center mb-16">
-              <span className="inline-block bg-blue-50 text-blue-600 border border-blue-100 text-sm font-semibold font-sans px-4 py-2 rounded-full mb-4">
-                Berita & Kegiatan
-              </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-4">
                 Berita Terbaru
               </h2>

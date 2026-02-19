@@ -21,18 +21,10 @@ export default function AboutPage() {
         <>
             {/* Page Header + History */}
             <section className="relative pt-32 md:pt-40 pb-20 overflow-hidden">
-                <Image
-                    src="/"
-                    alt=""
-                    fill
-                    className="object-cover opacity-30"
-                    priority
-                />
-                <div className="absolute inset-0 bg-slate-100/10" />
 
                 {/* Header */}
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-                    <span className="inline-block text-blue-600 text-sm font-semibold font-sans mb-4 tracking-wider uppercase">PROFIL ORGANISASI</span>
+                    <span className="inline-block text-sm font-semibold font-sans mb-4 tracking-wider uppercase">PROFIL ORGANISASI</span>
                     <div role="heading" aria-level={1} className="text-4xl md:text-5xl lg:text-6xl uppercase tracking-wide text-slate-900 mb-6">
                         <BlurText
                             text="TENTANG HIMATIKA"
@@ -56,7 +48,7 @@ export default function AboutPage() {
                                     <div className="w-12 h-12 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center">
                                         <History className="text-blue-500" size={24} />
                                     </div>
-                                    <span className="font-sans text-blue-500 font-semibold tracking-wide uppercase text-sm">Sejarah</span>
+                                    <span className="font-sans font-semibold tracking-wide uppercase text-sm">Sejarah</span>
                                 </div>
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-6">Perjalanan HIMATIKA</h2>
                                 <p className="text-slate-600 text-lg leading-relaxed mb-6 font-sans">
@@ -93,7 +85,7 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <AnimatedContent direction="up" distance={30} duration={0.5}>
                         <div className="text-center mb-16">
-                            <span className="inline-block text-blue-600 text-sm font-semibold font-sans mb-2 tracking-wider uppercase">VISI & MISI</span>
+                            <span className="inline-block text-sm font-semibold font-sans mb-2 tracking-wider uppercase">VISI & MISI</span>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900">Tujuan Organisasi</h2>
                         </div>
                     </AnimatedContent>
@@ -151,7 +143,7 @@ export default function AboutPage() {
                                     <div className="w-12 h-12 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center">
                                         <Sparkles className="text-blue-500" size={24} />
                                     </div>
-                                    <span className="font-sans text-blue-500 font-semibold tracking-wide uppercase text-sm">Filosofi Logo</span>
+                                    <span className="font-sans font-semibold tracking-wide uppercase text-sm">Filosofi Logo</span>
                                 </div>
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900 mb-6">Makna Logo Kami</h2>
                                 <div className="space-y-4">
@@ -194,7 +186,6 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <AnimatedContent direction="up" distance={30} duration={0.5}>
                         <div className="text-center mb-16">
-                            <span className="inline-block bg-blue-50 text-blue-600 border border-blue-100 text-sm font-semibold font-sans px-4 py-2 rounded-full mb-4">Nilai-Nilai</span>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-slate-900">
                                 Nilai yang Kami Junjung
                             </h2>
