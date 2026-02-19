@@ -18,7 +18,7 @@ export default function Home() {
       <section className="py-20 md:py-28 relative overflow-hidden">
         {/* Background image */}
         <Image
-          src="/"
+          src="/bg-sambutan.webp"
           alt=""
           fill
           className="object-cover"
